@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+        <title>beautus natalis!</title>
+        <style>
+            .maincontainer {
+                position: relative;
+                width: 250px;
+                height: 320px;
+                perspective: 1000px; /* Create a 3D effect */
+            }
+            
+            .thecard {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                transform-style: preserve-3d;
+                transition: transform 0.5s ease; /* Smooth transition on hover */
+            }
+            
+            .thecard:hover {
+                transform: rotateY(180deg); /* Rotate the card on hover */
+            }
+            
+            .thefront,
+            .theback {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 200%; /* Increased width */
+                height: 200%; /* Increased height */
+                background-size: cover;
+                background-position: center;
+                backface-visibility: hidden;
+                border-radius: 20px;
+                transform: translate(-50%, -50%); /* Center the image */
+            }
+            
+            .thefront {
+                background-image: url('COVER.JPG'); /* Front image */
+            }
+            
+            .theback {
+                background-image: url('BACK.JPG'); /* Back image */
+                transform: translate(-50%, -50%) rotateY(180deg); /* Rotate the back side initially */
+            }
+            
+            body {
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: 'Poppins', sans-serif;
+                background: #AABBAC;
+                margin: 0;
+            }
+            </style>
+            
+    </head>
+
+    <body>
+
+<div class="maincontainer">
+
+<div class="thecard">
+
+<div class="thefront">
+</div>  
+
+<div class="theback">
+</div>
+
+</div>
+
+</div>
+
+    </body>
+</html>
